@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+functions
+pandas
+
+datetime
+requests
+typing
+paramiko
