@@ -39,8 +39,20 @@ All related functions are in the `Upload` directory. The `upload.py` file orches
 - `Upload_Entire_Batch/`: Contains files used by the `Upload_Batch()` function.
 - `static/`: Contains HTML files only.
 
-## Running Tests
-To be added...
 
+---
 
-(other directories will be explaind later)
+### 2. Download
+
+This module includes functions to:
+
+- Store all study IDs from Orthanc PACS in an array (if not provided by the user).
+- Download each study ID from PACS to local storage. Extract the ZIP files immediately after download and delete the ZIP files.
+- After all studies are downloaded and extracted, ZIP them into one file.
+- Delete all individual study files except the final ZIP file.
+
+All functions are stored in the `Download` directory. The `main_download.py` script calls the helper functions to perform these operations.
+
+**Note:** Ensure the download directory is empty to avoid any errors.
+
+---
