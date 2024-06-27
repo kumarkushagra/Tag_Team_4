@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Studies Page</title>
+</head>
+<body>
+    <h1>Get Studies Page</h1>
+    <div id="studies-container">
+        <!-- Array elements will be displayed here -->
+    </div>
+    <button onclick="location.href='/'">Back to Homepage</button>
+
+    <script>
+        async function fetchStudies() {
+            const response = await fetch('/get-studies');
+            const data = await response.json();
+            const container = document.getElementById('studies-container');
+            container.innerHTML = '';
+            data.studies.forEach(study => {
+                const p = document.createElement('p');
+                p.textContent = study;
+                container.appendChild(p);
+            });
+        }
+
+        window.onload = fetchStudies;
+    </script>
+</body>
+</html>

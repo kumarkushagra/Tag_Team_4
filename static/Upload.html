@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+</head>
+<body>
+    <h1>Upload Page</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="dir_path">Dir Path:</label>
+        <input type="text" id="dir_path" name="dir_path"><br><br>
+
+        <!-- <label for="target_dir">Target Dir:</label>
+        <input type="text" id="target_dir" name="target_dir"><br><br> -->
+
+        <!-- <label for="csv_file">CSV File:</label>
+        <input type="file" id="csv_file" name="csv_file"><br><br> -->
+
+        <label for="anonymization_flag">Anonymization Flag:</label>
+        <input type="checkbox" id="anonymization_flag" name="anonymization_flag" value="true"><br><br>
+
+        <label for="batch_size">Batch Size:</label>
+        <input type="number" id="batch_size" name="batch_size"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <button onclick="location.href='/'">Back to Homepage</button>
+</body>
+</html>
